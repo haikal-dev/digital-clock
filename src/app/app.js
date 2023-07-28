@@ -4,7 +4,7 @@ export default class App {
         this.window = document.getElementById('window');
     }
 
-    fullScreen = (document, clock) => {
+    fullScreen = (document) => {
         if (document.requestFullscreen) {
             document.requestFullscreen();
         } else if (document.webkitRequestFullscreen) { /* Safari */
@@ -12,8 +12,6 @@ export default class App {
         } else if (document.msRequestFullscreen) { /* IE11 */
             document.msRequestFullscreen();
         }
-
-        clock.show();
     }
 
     enableFullScreen = (cb) => {
@@ -27,7 +25,8 @@ export default class App {
     run = (clock) => {
 
         this.enableFullScreen(() => {
-            this.fullScreen(this.window, clock);
+            this.fullScreen(this.window);
+            clock.show();
         });
 
         this.escapePressed((e) => {
