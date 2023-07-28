@@ -1,6 +1,6 @@
-const run = require('./app/app');
-const AlertService = require('./app/alert.service');
+import scss from './styles/main.scss';
+import App from './app/app';
 
-const alertService = new AlertService();
+const app = new App();
 
-run(alertService);
+app.run();

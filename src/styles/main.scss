@@ -2,4 +2,24 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #333;
+}
+
+
+#clock {
+    font-size: 175px;
+    width: 1000px;
+    margin: 300px 230px;
+    text-align: center;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    color: yellow;
+}
+
+.btn {
+    position: absolute;
+    width: 200px;
+    left: 45%;
+    top: 20px;
+    // border: 1px solid yellow;
 }
